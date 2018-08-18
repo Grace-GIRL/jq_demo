@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.11.1.js"></script>
+    <style>
+    
+        .blue{
+            background-color: lightblue;;
+        }
+        .green{
+            background-color: lightgreen;
+        }
+
+        ul li{
+            margin:5px 10px;
+        }
+
+        .red{
+            background-color: red;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <script>
+        jQuery(window).ready(function(){
+            $("ul>li:even").addClass("blue");
+            $("ul>li:odd").addClass("green");
+
+            var origin="";
+            $("ul li").mouseover(function(){
+                origin=$(this).attr("class");
+                console.log("origin");
+                $(this).addClass("red");
+            })
+
+            $("ul li").mouseout(function(){
+                console.log(1);
+                $(this).addClass("origin");
+            })
+        })
+    
+    
+    
+    
+    </script>
+    <div>
+        <ul>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+            <li>子曰：知之为知之，不知为不知，是知也</li>
+        </ul>
+    </div>
+</body>
+</html>

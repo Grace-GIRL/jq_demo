@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.11.1.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrap {
+            width: 330px;
+            height: 30px;
+            margin: 100px auto 0;
+            padding-left: 10px;
+            background-image: url(images/bg.jpg);
+        }
+
+        .wrap li {
+            background-image: url(images/libg.jpg);
+        }
+
+        .wrap>ul>li {
+            float: left;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        .wrap a {
+            display: block;
+            height: 30px;
+            width: 100px;
+            text-decoration: none;
+            color: #000;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .wrap li ul {
+            position: absolute;
+            top: 30px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(function(){
+            //需求：鼠标移入标题栏，显示相应的下拉菜单
+            // $(".wrap>ul>li>a").mouseover(function(){
+            //     console.log(1);
+            //     $(".wrap>ul>li>ul").slideDown();
+            // })
+            // $(".wrap>ul>li>a").mouseout(function(){
+            //     $(".wrap>ul>li>ul").slideUp();
+            // })
+                
+                // $(".wrap>ul>li").mouseover(function(){
+                //     this.children(1).slideDown();
+                // })
+                // $(".wrap>ul>li").mouseout(function(){
+                //     this.children(1).slideUp();
+                // })
+                    
+
+                // $(".wrap>ul>li").mouseover(function(){
+                //     $(this).children("ul").slideDown();
+                // })
+
+                // $(".wrap>ul>li").mouseout(function(){
+                //     $(this).children("ul").slideUp();
+                // })
+
+
+
+
+
+                
+
+                    // $(".wrap>ul").children("li").mouseover(function(){
+                    //     $(this).children("ul").show();
+                        
+                    // })
+                    $(".wrap>ul>li").mouseover(function(){
+                        $(this).children("ul").show();
+                    })
+                    $(".wrap>ul>li").mouseout(function(){
+                        $(this).children("ul").hide();
+                    })
+
+        })
+    
+    
+    
+    </script>
+
+    <div class="wrap">
+        <ul>
+            <li>
+                <a href="javascript:void(0);">一级菜单1</a>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">二级菜单1</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">二级菜单2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">二级菜单3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);">一级菜单1</a>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">二级菜单1</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">二级菜单2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">二级菜单3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);">一级菜单1</a>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);">二级菜单1</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">二级菜单2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">二级菜单3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
