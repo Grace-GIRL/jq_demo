@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        	button{
+        		width: 100px;
+        		height: 50px;
+        		font-size:25px;
+        		margin:5px 0 0 5px;
+        	}
+        	.box{
+        		background-color: lightblue;
+        		width: 300px;
+        		height: 300px;
+        		margin:20px 0 0 5px;
+        	}
+
+        	.current{
+        		background-color: lightgreen;
+        	}
+        </style>
+        <script src="lib/jquery-1.11.1.js"></script>
+        <script>
+        	$(function(){
+        		// 样式少的时候用css()
+
+        		$("button").click(function(){
+        			//1类操作
+        			//$(".box").toggleClass('current');
+        			//        			
+        			// if($(".box").hasClass('current')){
+        			// 	$(".box").removeClass('current');
+        			// }else{
+        			// 	$(".box").addClass('current');
+        			// }
+        			//2样式操作
+        			console.log($(".box").css("background-color")); //rgb(173, 216, 230)
+        			console.log($(".box").css("backgroundColor"));//rgb(173, 216, 230)
+
+        			if($(".box").css("background-color")==="rgb(173, 216, 230)"){
+        				$(".box").css("background-color","lightgreen");
+        			}else{
+        				var json={"background-color":"lightblue"};
+        				$(".box").css(json);
+        			}
+
+
+
+        		})
+        	})
+        </script>
+    </head>
+    <body>
+    	<button>切换</button>
+    	<div class="box">
+    		锄禾日当午，
+    		汗滴禾下土。
+    		谁知盘中餐，
+    		粒粒皆辛苦。
+    	</div>
+    </body>
+</html>

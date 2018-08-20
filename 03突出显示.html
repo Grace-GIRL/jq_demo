@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        	*{
+        		margin: 0;
+        		padding: 0;
+        	}
+        	body{
+        		background-color: black;
+        	}
+
+        	.wrap{
+        		width: 630px;	
+        		height: 392px;
+        		border:3px solid #ccc;
+        		padding:8px;
+        		overflow:hidden;
+        		margin:100px auto ;
+        		background-color: black;
+        	}
+        	.wrap ul li{
+        		float:left;
+        		margin:5px;
+        	}
+        	.wrap ul{
+        		list-style:none;
+        	}
+
+        	.wrap ul li img{
+        		vertical-align:middle;
+        	}
+
+
+
+
+        </style>
+    </head>
+    <body>
+    	<script src="lib/jquery-1.11.1.js"></script>
+    	<script>
+    		$(function(){
+    			//需求：鼠标移入当前图片，高亮显示，其他设置遮罩层
+    			// $(".wrap ul li img").mouseenter(function(){
+    			// 	// $(this).css("opacity",1);
+    			// 	// $(this).siblings("li").css("opacity",0.4);
+    			// 	// 链式编程 使用的属性是opacity
+    				
+    			// 	$(this).css("opacity",1).siblings("li").css("opacity",0.4);
+    			// });
+
+    			// $(".wrap").mouseleave(function(){
+    			// 	$("li").css("opacity",1);
+    			// });
+    			// 
+    			$("li").mouseenter(function(){
+    				$(this).css("opacity",1).siblings("li").css("opacity",0.4);
+    			})
+    			$(".wrap").mouseleave(function(){
+    				$("li").css("opacity",1);
+    			})
+    		});
+    	</script>
+    	<div class="wrap">
+    		<ul>
+    			<li><a href="#"><img src="images/01.jpg" alt=""></a></li>
+    			<li><a href="#"><img src="images/02.jpg" alt=""></a></li>
+    			<li><a href="#"><img src="images/03.jpg" alt=""></a></li>
+    			<li><a href="#"><img src="images/04.jpg" alt=""></a></li>
+    			<li><a href="#"><img src="images/05.jpg" alt=""></a></li>
+    			<li><a href="#"><img src="images/06.jpg" alt=""></a></li>
+    		</ul>
+    	</div>
+    </body>
+</html>
